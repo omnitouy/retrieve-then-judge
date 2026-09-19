@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retrieve-then-judge"
+version = "0.1.0"
+description = "A fail-open, abstention-first context gate for AI-agent memory retrieval"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = ["ai-agents", "memory", "retrieval", "reranking", "hermes-agent"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1,<2", "pytest>=8,<9", "ruff>=0.6,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
