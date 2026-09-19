@@ -18,7 +18,7 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["build>=1,<2", "pytest>=8,<9", "ruff>=0.6,<1"]
+dev = ["build>=1,<2", "pytest>=8,<10", "ruff>=0.6,<1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
